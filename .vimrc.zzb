@@ -1,7 +1,10 @@
 """""""""""""""""""""""""""""""""
 "  Vim Config for Personal Env  "
 """""""""""""""""""""""""""""""""
-set tabstop=8 shiftwidth=2 softtabstop=2 expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set colorcolumn=+1
-hi ColorColumn guibg=#2d2d2d ctermbg=246
+" hi ColorColumn guibg=#2d2d2d ctermbg=246
 set textwidth=80
+autocmd FileType python setlocal et sta sw=2 sts=2
+" Workaround to force sw=2
+autocmd VimEnter * set sw=2

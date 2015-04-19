@@ -146,9 +146,9 @@ Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
 
 Bundle "Yggdroot/indentLine"
-Bundle "godlygeek/csapprox"
+" Bundle "godlygeek/csapprox"
 Bundle "jaromero/vim-monokai-refined"
-set t_Co=256
+" set t_Co=256
 
 if(has("gui_running"))
   " colorscheme solarized
@@ -163,7 +163,7 @@ endif
 " Transparent background.
 hi Normal ctermfg=252 ctermbg=none
 " Change color of ColorColumn
-highlight ColorColumn ctermbg=8
+" highlight ColorColumn ctermbg=8
 highlight SignColumn ctermbg=none
 " Change color of SpellBad
 hi clear SpellBad
@@ -389,7 +389,7 @@ Bundle 'vim-scripts/SearchComplete'
 " highlight CursorLine term=bold
 
 " Patch to current colorschema
-hi CursorLine cterm=none ctermbg=black
+" hi CursorLine cterm=none ctermbg=black
 
 
 
