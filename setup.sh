@@ -1,17 +1,34 @@
 #!/bin/bash
 
 dest_path="$HOME/"
-ignored_files='setup.sh'
 
-for file in `ls -A`
+dotfiles=(
+'.ackrc'
+'.bash_aliases'
+'.blazerc'
+'.oh-my-zsh'
+'.profile'
+'.pyrc'
+'.tmux-plugins'
+'.tmux.conf'
+'.vim'
+'.vimrc'
+'.vimrc.google'
+'.vimrc.zzb'
+'.xmonad'
+'.zshrc'
+'ctrlp.sh'
+'date_delta.py')
+
+for file in ${dotfiles[@]};
 do
-  if [[ $ignored_files == $file ]]; then continue; fi;
   ln -s $PWD'/'$file $dest_path$file
 done
+exit
 
 ######################################
-pkgs='ack-grep'
-for pkg in $pkgs
+pkgs=('ack-grep')
+for pkg in ${pkgs[@]}
 do
   sudo apt-get install $pkg
 done
@@ -33,6 +50,6 @@ else
 fi
 
 # Google only
-if [ -d '/google' ]; then
+if [[ -e '/google' ]]; then
   ineptitude install youcompleteme stable
 fi
