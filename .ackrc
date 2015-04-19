@@ -1,0 +1,6 @@
+--ignore-dir=absinthe_shot
+--ignore-dir=testdata
+--type-set=proto=.proto
+--type-set=gcl=.gcl
+--type-set=BUILD=BUILD
+--type-set=borgcfg=.borgcfg

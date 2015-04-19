@@ -1,0 +1,44 @@
+""""""""""""""""""""""""""""
+"  Vim Config in Corp Env  "
+""""""""""""""""""""""""""""
+source /usr/share/vim/google/google.vim
+
+Glug youcompleteme-google
+Glug piper
+Glug g4
+Glug blazedeps
+Glug fileswitch
+Glug codefmt
+Glug codefmt-google auto_filetypes+=blazebuild
+Glug relatedfiles plugin[mappings]=',f'
+Glug ultisnips-google
+
+Glug outline-window
+nnoremap ,g :GoogleOutlineWindow<CR> 
+
+Glug corpweb
+noremap ,cs :CorpWebCs<Space>
+noremap ,cf :CorpWebCsFile<CR>
+noremap ,cc :CorpWebCs 
+nnoremap ,ss vip:sort u<CR>
+" nnoremap ,f :!~/fixcode %<CR>
+
+Glug blaze plugin[mappings]=",b"
+Glug refactorer
+
+" Fix for gf path jumping
+" make $ClientRoot the parent of the current perforce directory.
+let $ClientRoot = substitute(getcwd(), '/google3\(/.*\|$\)', '', '')
+" we first add editable paths, then read-only ones
+set path+=$ClientRoot " for  Python-style imports
+set path+=$ClientRoot/google3 " for <#include "bigtable/public/bigtable.h"> cpp-like includes
+set path+=$ClientRoot/READONLY
+set path+=$ClientRoot/READONLY/google3
+
+source /usr/share/vim/google/gtags.vim
+nnoremap <C-\> :exe 'Gtlist '  . expand('<cword>')<CR>
+Glug easygoogle
+call easygoogle#rc()
+
+" Config for CtrlP
+let g:ctrlp_user_command = 'echo %s > /dev/null; bash ~/ctrlp.sh'

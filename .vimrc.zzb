@@ -1,0 +1,7 @@
+"""""""""""""""""""""""""""""""""
+"  Vim Config for Personal Env  "
+"""""""""""""""""""""""""""""""""
+set tabstop=8 shiftwidth=2 softtabstop=2 expandtab
+set colorcolumn=+1
+hi ColorColumn guibg=#2d2d2d ctermbg=246
+set textwidth=80
