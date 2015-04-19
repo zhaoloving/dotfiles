@@ -48,7 +48,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump tmux web-search vi-mode)
+plugins=(autojump tmux web-search vi-mode git)
 
 source $ZSH/oh-my-zsh.sh
 # source $ZSH_CUSTOM/incr.zsh
@@ -75,7 +75,7 @@ export PATH="/usr/local/buildtools/java/jdk/bin:/usr/local/sbin:/usr/local/bin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-PROMPT='%c > '
+# PROMPT='%c > '
 _test_prompt() {
   echo $PWD | sed -E 's/.*cloud\/.*\/(.*)\/google3\/(.*)/\1 \2/' \
 	    | sed 's/\/usr\/local\/google\/home/HOME/' \
@@ -83,7 +83,7 @@ _test_prompt() {
   # python ~/date_delta.py
 }
 
-PROMPT='[$(_test_prompt)] %c > '
+# PROMPT='[$(_test_prompt)] %c > '
 
 # alias
 source ~/.bash_aliases
@@ -203,7 +203,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 
 
-source /etc/bash_completion.d/g4d
+# source /etc/bash_completion.d/g4d
 compdef g4=p4
 
 # The next line updates PATH for the Google Cloud SDK.
