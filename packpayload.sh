@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -cvf payload.tar .vim .tmux-plugins .oh-my-zsh
+tar -czvf payload.tar.gz .vim .tmux-plugins .oh-my-zsh

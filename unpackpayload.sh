@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -xvf payload.tar
+tar -xzvf payload.tar.gz
