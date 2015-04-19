@@ -24,7 +24,6 @@ for file in ${dotfiles[@]};
 do
   ln -s $PWD'/'$file $dest_path$file
 done
-exit
 
 ######################################
 pkgs=('ack-grep')
