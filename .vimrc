@@ -198,9 +198,9 @@ nnoremap ,cs :!google-chrome --new-tab https://cs.corp.google.com/'<cword>'<CR><
 
 command! -nargs=+ NewGrep execute 'silent grep! <args>' | copen
 
-Bundle 'mileszs/ack.vim'
-nmap ,,a  :execute 'Ack --ignore-dir=testdata --ignore-dir=config --ignore-dir=absinthe_shot ' . expand('<cword>') <CR>
-nmap ,,A  :Ack --ignore-dir=testdata --ignore-dir=config --ignore-dir=absinthe_shot 
+" Bundle 'mileszs/ack.vim'
+" nmap ,,a  :execute 'Ack --ignore-dir=testdata --ignore-dir=config --ignore-dir=absinthe_shot ' . expand('<cword>') <CR>
+" nmap ,,A  :Ack --ignore-dir=testdata --ignore-dir=config --ignore-dir=absinthe_shot 
 
 Bundle "vim-scripts/argtextobj.vim"
 Bundle "bkad/CamelCaseMotion"

@@ -3,27 +3,18 @@
 dest_path="$HOME/"
 
 dotfiles=(
-'.ackrc'
-'.bash_aliases'
-'.blazerc'
-'.oh-my-zsh'
-'.profile'
-'.pyrc'
 '.tmux-plugins'
 '.tmux.conf'
 '.vim'
 '.vimrc'
-'.vimrc.google'
-'.vimrc.zzb'
-'.xmonad'
-'.zshrc'
-'ctrlp.sh'
-'date_delta.py')
+'.vimrc.zzb')
 
 for file in ${dotfiles[@]};
 do
   ln -s $PWD'/'$file $dest_path$file
 done
+
+exit
 
 ######################################
 pkgs=('ack-grep')
