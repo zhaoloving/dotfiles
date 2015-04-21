@@ -389,7 +389,7 @@ Bundle 'vim-scripts/SearchComplete'
 " highlight CursorLine term=bold
 
 " Patch to current colorschema
-hi CursorLine cterm=none ctermbg=black
+" hi CursorLine cterm=none ctermbg=black
 
 
 
